@@ -4,6 +4,7 @@ import android.graphics.Color
 import android.os.Bundle
 import android.widget.RadioButton
 import android.widget.RadioGroup
+import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -20,20 +21,19 @@ class MainActivity : AppCompatActivity() {
             insets
         }
 
+
         val radioGroup = findViewById<RadioGroup>(R.id.radioGroup)
         val radioStart = findViewById<RadioButton>(R.id.radioStart)
         val radioCenter = findViewById<RadioButton>(R.id.radioCenter)
         val radioEnd = findViewById<RadioButton>(R.id.radioEnd)
+        val textView = findViewById<TextView>(R.id.textView)
+        textView.text ="Start"
 
         radioGroup.setOnCheckedChangeListener { group, checkedId ->
-            val radioButton = findViewById<RadioButton>(checkedId)
-
-            if (radioButton.isChecked){
-                radioButton.setBackgroundColor(Color.BLUE)
-                radioButton.setTextColor(Color.WHITE)
-            }
-            radioButton.setBackgroundColor(Color.BLUE)
-            radioButton.setTextColor(Color.WHITE)
+            val checkedButton = findViewById<RadioButton>(checkedId)
+            val selectedText = checkedButton.text.toString()
+            textView.text = selectedText
         }
+
     }
 }

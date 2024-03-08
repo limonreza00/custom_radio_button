@@ -6,7 +6,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:gravity="center">
 
 
         <RadioGroup
@@ -15,10 +16,7 @@
             android:layout_height="?attr/actionBarSize"
             android:weightSum="3"
             android:orientation="horizontal"
-            android:layout_margin="5dp"
-            android:background="@drawable/radio_group_bg">
-
-
+            android:layout_margin="5dp">
             <com.google.android.material.radiobutton.MaterialRadioButton
                 android:id="@+id/radioStart"
                 android:layout_width="match_parent"
@@ -27,7 +25,11 @@
                 android:layout_weight="1"
                 android:textSize="20sp"
                 android:gravity="center"
-                android:button="@android:color/transparent"/>
+                android:button="@android:color/transparent"
+                android:background="@drawable/radio_selector"
+                android:layout_margin="5dp"
+                android:checked="true"
+                android:textColor="@drawable/radio_text_selector"/>
             <com.google.android.material.radiobutton.MaterialRadioButton
                 android:id="@+id/radioCenter"
                 android:layout_width="match_parent"
@@ -36,7 +38,10 @@
                 android:layout_weight="1"
                 android:textSize="20sp"
                 android:gravity="center"
-                android:button="@android:color/transparent"/>
+                android:button="@android:color/transparent"
+                android:background="@drawable/radio_selector"
+                android:layout_margin="5dp"
+                android:textColor="@drawable/radio_text_selector"/>
             <com.google.android.material.radiobutton.MaterialRadioButton
                 android:id="@+id/radioEnd"
                 android:layout_width="match_parent"
@@ -45,8 +50,19 @@
                 android:layout_weight="1"
                 android:textSize="20sp"
                 android:gravity="center"
-                android:button="@android:color/transparent"/>
-
+                android:button="@android:color/transparent"
+                android:background="@drawable/radio_selector"
+                android:layout_margin="5dp"
+                android:textColor="@drawable/radio_text_selector"/>
         </RadioGroup>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#FF6D00"
+        android:text=""
+        android:textSize="25sp"
+        android:layout_marginTop="10dp"/>
 
 </LinearLayout>
