@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:weightSum="3"
+            android:orientation="horizontal"
+            android:layout_margin="5dp"
+            android:background="@drawable/radio_group_bg">
+
+
+            <com.google.android.material.radiobutton.MaterialRadioButton
+                android:id="@+id/radioStart"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Start"
+                android:layout_weight="1"
+                android:textSize="20sp"
+                android:gravity="center"
+                android:button="@android:color/transparent"/>
+            <com.google.android.material.radiobutton.MaterialRadioButton
+                android:id="@+id/radioCenter"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Center"
+                android:layout_weight="1"
+                android:textSize="20sp"
+                android:gravity="center"
+                android:button="@android:color/transparent"/>
+            <com.google.android.material.radiobutton.MaterialRadioButton
+                android:id="@+id/radioEnd"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="End"
+                android:layout_weight="1"
+                android:textSize="20sp"
+                android:gravity="center"
+                android:button="@android:color/transparent"/>
+
+        </RadioGroup>
+
+</LinearLayout>
