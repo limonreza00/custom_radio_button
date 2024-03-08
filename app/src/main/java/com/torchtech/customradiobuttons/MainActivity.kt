@@ -1,6 +1,5 @@
 package com.torchtech.customradiobuttons
 
-import android.graphics.Color
 import android.os.Bundle
 import android.widget.RadioButton
 import android.widget.RadioGroup
@@ -23,13 +22,10 @@ class MainActivity : AppCompatActivity() {
 
 
         val radioGroup = findViewById<RadioGroup>(R.id.radioGroup)
-        val radioStart = findViewById<RadioButton>(R.id.radioStart)
-        val radioCenter = findViewById<RadioButton>(R.id.radioCenter)
-        val radioEnd = findViewById<RadioButton>(R.id.radioEnd)
         val textView = findViewById<TextView>(R.id.textView)
-        textView.text ="Start"
+        textView.text =getString(R.string.start)
 
-        radioGroup.setOnCheckedChangeListener { group, checkedId ->
+        radioGroup.setOnCheckedChangeListener { _, checkedId ->
             val checkedButton = findViewById<RadioButton>(checkedId)
             val selectedText = checkedButton.text.toString()
             textView.text = selectedText
